@@ -103,11 +103,6 @@
 
 ??? abstract "Optional - [Click to show/hide]"
 
-    !!! tip "I recommend using the following Custom Formats"
-
-        - `x265 (no HDR/DV)` over the `x265 (HD)`, Read the Why below and don't forget to read the warning,<br>:warning: Only ever include one of them :warning:
-        - `AV1` This will prevent grabbing AV1 releases.
-
     !!! danger "Adding any of the `HDR10+ Boosts` could result in less streaming optimized releases :warning:"
 
     | Custom Format                                                                                                       |                                Score                                | Trash ID                                             |
@@ -118,7 +113,6 @@
     | [{{ radarr['cf']['obfuscated']['name'] }}](/Radarr/Radarr-collection-of-custom-formats/#obfuscated)                 |     {{ radarr['cf']['obfuscated']['trash_scores']['default'] }}     | {{ radarr['cf']['obfuscated']['trash_id'] }}         |
     | [{{ radarr['cf']['retags']['name'] }}](/Radarr/Radarr-collection-of-custom-formats/#retags)                         |       {{ radarr['cf']['retags']['trash_scores']['default'] }}       | {{ radarr['cf']['retags']['trash_id'] }}             |
     | [{{ radarr['cf']['scene']['name'] }}](/Radarr/Radarr-collection-of-custom-formats/#scene)                           |       {{ radarr['cf']['scene']['trash_scores']['default'] }}        | {{ radarr['cf']['scene']['trash_id'] }}              |
-    | [{{ radarr['cf']['x265-no-hdrdv']['name'] }}](/Radarr/Radarr-collection-of-custom-formats/#x265-no-hdrdv) :warning: |   {{ radarr['cf']['x265-no-hdrdv']['trash_scores']['default'] }}    | {{ radarr['cf']['x265-no-hdrdv']['trash_id'] }}      |
     | [{{ radarr['cf']['hdr10plus-boost']['name'] }}](/Radarr/Radarr-collection-of-custom-formats/#hdr10plus-boost)       |  {{ radarr['cf']['hdr10plus-boost']['trash_scores']['default'] }}   | {{ radarr['cf']['hdr10plus-boost']['trash_id'] }}    |
     | [{{ radarr['cf']['dv-hdr10plus-boost']['name'] }}](/Radarr/Radarr-collection-of-custom-formats/#dv-hdr10plus-boost) | {{ radarr['cf']['dv-hdr10plus-boost']['trash_scores']['default'] }} | {{ radarr['cf']['dv-hdr10plus-boost']['trash_id'] }} |
 
@@ -133,16 +127,6 @@
     - **{{ radarr['cf']['obfuscated']['name'] }}:** [*Optional*] Use these only if you wish to avoid renamed releases.
     - **{{ radarr['cf']['retags']['name'] }}:** [*Optional*] Use this if you want to avoid retagged releases. Retagged releases often are not consistent with the quality of the original group's release.
     - **{{ radarr['cf']['scene']['name'] }}:** [*Optional*] Use this only if you want to avoid SCENE releases.
-    - **{{ radarr['cf']['x265-no-hdrdv']['name'] }}:** This blocks 720/1080p (HD) releases that are encoded in x265. - More info [HERE](/Misc/x265-4k/){:target="_blank" rel="noopener noreferrer"}.
-
-        **But it will allow x265 releases if they have HDR and/or DV**
-
-        *Being that some NF releases won't be released as 4k, but you want to have DV/HDR releases.*
-
-        In your quality profile use the following score for this Custom Format: `{{ radarr['cf']['x265-no-hdrdv']['trash_scores']['default'] }}`
-
-        !!! Danger "Don't use this together with [{{ radarr['cf']['x265-hd']['name'] }}](/Radarr/Radarr-collection-of-custom-formats/#x265-hd), Only ever include one of them :warning:"
-
     - **{{ radarr['cf']['hdr10plus-boost']['name'] }}:** [*Optional*] (use this one only if you have a (Samsung) TV that supports HDR10+ and don't mind the chance to get less streaming optimized releases)
     - **{{ radarr['cf']['dv-hdr10plus-boost']['name'] }}:** [*Optional*] (use this one only if you don't mind the chance to get less streaming optimized releases)
 

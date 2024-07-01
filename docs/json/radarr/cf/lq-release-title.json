@@ -43,12 +43,30 @@
       }
     },
     {
+      "name": "SWTYBLZ",
+      "implementation": "ReleaseTitleSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "\\b(SWTYBLZ)\\b"
+      }
+    },
+    {
       "name": "TeeWee",
       "implementation": "ReleaseTitleSpecification",
       "negate": false,
       "required": false,
       "fields": {
         "value": "\\b(TeeWee)\\b"
+      }
+    },
+    {
+      "name": "TEKNO3D",
+      "implementation": "ReleaseTitleSpecification",
+      "negate": false,
+      "required": false,
+      "fields": {
+        "value": "\\b(TEKNO3D)\\b"
       }
     },
     {
